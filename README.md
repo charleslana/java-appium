@@ -1,4 +1,4 @@
-# Java+RestAssured
+# Java+Appium
 
 Requer Java 21
 
