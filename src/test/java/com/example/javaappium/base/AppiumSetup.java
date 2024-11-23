@@ -26,6 +26,8 @@ public class AppiumSetup {
             capabilities.setCapability("appium:noReset", Boolean.parseBoolean(prop.getProperty("noReset")));
             capabilities.setCapability("appium:skipUnlock", Boolean.parseBoolean(prop.getProperty("skipUnlock")));
             capabilities.setCapability("appium:app", getAppPath);
+            capabilities.setCapability("appium:appPackage", prop.getProperty("appPackage"));
+            capabilities.setCapability("appium:appActivity", prop.getProperty("mainActivity"));
             capabilities.setCapability("appium:automationName", prop.getProperty("automationName"));
             String url = "http://127.0.0.1:4723/wd/hub";
             driver = new AndroidDriver((new URI(url)).toURL(), capabilities);
